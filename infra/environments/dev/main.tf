@@ -17,6 +17,13 @@ terraform {
 
 provider "aws" {
   region = "ap-northeast-1"
+
+  default_tags {
+    tags = {
+      Project = "dev-kodaklog"
+      ManagedBy = "Terraform"
+    }
+  }
 }
 
 module "common_s3" {
