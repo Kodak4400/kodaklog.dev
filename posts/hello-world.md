@@ -1,5 +1,6 @@
 ---
-title: "はじめての投稿"
+title: "Hello, World!"
+description: "This is my first blog post."
 date: "2024-03-21"
 ---
 こんにちは！これは私の最初のブログ投稿です。
@@ -31,3 +32,9 @@ A note[^1]
 
 * [ ] to do
 * [x] done
+
+## Code
+
+```code:python
+print("Hello, World!")
+```
