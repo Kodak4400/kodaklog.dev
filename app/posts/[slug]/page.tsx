@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getPostBySlug, getAllPosts } from '@/lib/posts';
 import { notFound } from 'next/navigation';
 import { Markdown } from '@/components/markdown';
@@ -15,7 +16,21 @@ export async function generateStaticParams() {
   }));
 }
 
+export const generateMetadata = async ({ params }: { params: Promise<{
+  slug: string;
+}> }): Promise<Metadata> => {
+  const p = await params
+  const post = getPostBySlug(p.slug);
 
+  if (!post) {
+    notFound();
+  }
+
+  return {
+    title: `${post.title} | ${process.env.siteName}`,
+    description: `${post.description}`,
+  };
+}
 
 export default async function Post({ params }: { params: Promise<{
   slug: string;

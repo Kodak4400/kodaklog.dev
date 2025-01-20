@@ -21,6 +21,7 @@ export function getAllPosts() {
       return {
         slug,
         title: data.title,
+        description: data.description,
         date: data.date,
         content,
       };
@@ -47,6 +48,7 @@ export function getPostBySlug(slug: string) {
   return {
     slug,
     title: data.title,
+    description: data.description,
     date: data.date,
     content,
   };

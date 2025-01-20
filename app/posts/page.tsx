@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { getAllPosts } from '@/lib/posts';
 import Link from 'next/link';
 import { Card } from '@/components/card';
 import { formatDate } from '@/lib/utils';
+
+export const metadata: Metadata = {
+  title: `Posts | ${process.env.siteName}`,
+  description: "kodak が post した Blog 一覧.",
+};
 
 export default function Posts() {
   const posts = getAllPosts();

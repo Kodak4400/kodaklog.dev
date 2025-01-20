@@ -6,7 +6,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-xl font-bold text-gray-800 hover:text-gray-600">
-            kodaklog-dev
+            {process.env.siteName}
           </Link>
           <div className="space-x-6">
             <Link href="/" className="text-gray-600 hover:text-gray-800">

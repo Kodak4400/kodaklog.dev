@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
+  },
+  env: {
+    siteName: "kodaklog",
+    thumbnail: "/assets/kodaklog.webp"
   }
 };
 

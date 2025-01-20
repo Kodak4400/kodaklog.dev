@@ -1,40 +1,19 @@
 ---
 title: "Hello, World!"
-description: "This is my first blog post."
-date: "2024-03-21"
+description: "このサイトは、Bolt.newでデザインと制作を行い、Cloudflare Pagesでホスティングして、はじめて書く記事です"
+date: "2025-01-21"
 ---
-こんにちは！これは私の最初のブログ投稿です。
 
-# GFM
+こんにちは！これが私の最初のブログ投稿になります。
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, nemo!
+このブログサイトは、[Bolt.new](https://bolt.new/)を使って、デザインと制作を行い、[Cloudflare Pages](https://www.cloudflare.com/ja-jp/)でホスティングしています。
 
-## Autolink literals
+また、サムネ画像も[ChartGPT](https://chatgpt.com/)で作成しています。
 
-www.example.com, https://example.com, and contact@example.com.
+つまり、このサイトの半分以上がAIによって作られており、私自身がサイト制作に掛かった時間はたったの数時間です。
 
-## Footnote
+自分のアウトプットを増やそうと思って作ったブログサイトですが、この記事をかいている時点では、まだどのような方向性で記事を書いていくか決まっていません。
 
-A note[^1]
+せっかく作ったので、色々と試していこうと思っています。
 
-[^1]: Big note.
-
-## Strikethrough
-
-~one~ or ~~two~~ tildes.
-
-## Table
-
-| a | b  |  c |  d  |
-| - | :- | -: | :-: |
-
-## Tasklist
-
-* [ ] to do
-* [x] done
-
-## Code
-
-```code:python
-print("Hello, World!")
-```
+それでは、これからもよろしくお願いします！
