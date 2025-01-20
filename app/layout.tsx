@@ -7,6 +7,7 @@ import { Footer } from '@/components/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kodaklog-dev.pages.dev/"),
   title: "kodaklog",
   description: "kodak の Tech Blog.",
   openGraph: {

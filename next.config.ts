@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
   },
   env: {
     siteName: "kodaklog",
-    thumbnail: "/assets/kodaklog.webp"
+    thumbnail: "assets/kodaklog.webp"
   }
 };
 
