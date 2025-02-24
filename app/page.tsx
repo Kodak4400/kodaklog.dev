@@ -1,44 +1,65 @@
 import Image from "next/image";
 import Link from 'next/link';
 import { Button } from '@/components/button';
-// import { Github } from 'lucide-react';
+import { Github, BookOpen, Twitter } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-[calc(90vh-4rem)] flex items-center">
-      <div className="w-full max-w-2xl mx-auto py-16 space-y-12">
-        <div className="space-y-4 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-800">
-            About me
-          </h1>
-          <p className="text-xl text-gray-600">
-            Hey, I am kodak @ Cloud Engineer
-          </p>
-        </div>
+    <div className="flex flex-col items-center space-y-8 py-12">
+      <div className="relative w-32 h-32 rounded-full overflow-hidden">
+        <Image
+          src="/assets/images/profile/kodak.jpeg"
+          alt="kodak"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
-        <div className="relative w-32 h-32 mx-auto">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full" />
-          <Image
-            src="/assets/images/profile/kodak.jpeg"
-            alt="kodak"
-            fill
-            className="object-cover rounded-full p-1"
-          />
-        </div>
+      <div className="text-center max-w-2xl">
+        <h1 className="text-3xl font-bold mb-4">こんにちは、kodakです👋</h1>
+        <p className="text-lg text-[#666666] mb-6">
+          フルスタックエンジニアとして活動しています。
+          主にTypeScript、React、Next.js、Node.jsを使用した開発を行っています。
+          技術的な知見や日々の学びをブログで共有しています。
+        </p>
+      </div>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <Link href="/posts">
+          <Button size="lg" className="bg-gray-800 hover:bg-gray-700">
+            記事を読む
+          </Button>
+        </Link>
+      </div>
 
-        <div className="space-y-8 text-center">
-          <p className="text-lg text-gray-600 leading-relaxed">
-            このブログでは、技術的な知見や日々の学びをPostしていきます。
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/posts">
-              <Button size="lg" className="bg-gray-800 hover:bg-gray-700">
-                記事を読む
-              </Button>
-            </Link>
-          </div>
-        </div>
+      <div className="flex space-x-6">
+        <Link
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#333333] hover:text-[#666666]"
+          aria-label="GitHub"
+        >
+          <Github className="h-6 w-6" />
+        </Link>
+        <Link
+          href="https://b.hatena.ne.jp"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#333333] hover:text-[#666666]"
+          aria-label="Hatena Blog"
+        >
+          <BookOpen className="h-6 w-6" />
+        </Link>
+        <Link
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#333333] hover:text-[#666666]"
+          aria-label="Twitter"
+        >
+          <Twitter className="h-6 w-6" />
+        </Link>
       </div>
     </div>
   );

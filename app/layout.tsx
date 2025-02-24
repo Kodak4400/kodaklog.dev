@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import './globals.css';
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,14 +26,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="ja">
-      <body className={`${inter.className} min-h-screen bg-gray-200 text-gray-600`}>
+      <body className={`${inter.className} bg-[#f5f5f5] text-[#333333]`}>
         <Header />
-        <main className="container mx-auto px-4">{children}</main>
+        <main className="min-h-screen max-w-[1200px] mx-auto px-4 py-8">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

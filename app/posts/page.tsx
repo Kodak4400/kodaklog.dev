@@ -13,14 +13,15 @@ export default function Posts() {
   const posts = getAllPosts();
 
   return (
-    <div className="space-y-8 max-w-7xl mx-auto px-4 py-4">
-      <h1 className="text-3xl font-bold text-gray-800 mt-4">Posts</h1>
+    <div className="space-y-8 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mt-4">記事一覧</h1>
       <div className="grid gap-4">
         {posts.map((post) => (
           <Link key={post.slug} href={`/posts/${post.slug}`}>
-            <Card className="p-5 hover:shadow-lg transition-shadow">
-              <h2 className="text-xl font-semibold mb-2 text-gray-600">{post.title}</h2>
-              <p className="text-gray-600 text-sm">{formatDate(post.date)}</p>
+            <Card className="p-4 hover:shadow-lg transition-shadow">
+              <h2 className="font-bold text-xl font-semibold mb-2">{post.title}</h2>
+              <time dateTime={post.date} className="text-sm mb-2">{formatDate(post.date)}</time>
+              <div className="prose prose-lg max-w-none">{post.description}</div>
             </Card>
           </Link>
         ))}
